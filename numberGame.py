@@ -4,12 +4,13 @@ secret_number=random.randint(1,100) # Generate the random number between 1 to 10
 
 attempet=0
 Max_attempet=10
+score=0
 
 while attempet<Max_attempet:
     guess=int(input('Enter the Guess number :'))
     attempet +=1
 
-    if guess==secret_number:
+    if guess==secret_number: # create condition for correct or not.
         print('Congratulations! Ypour guessed number is correced.')
         print('attempet used', attempet)
         break
