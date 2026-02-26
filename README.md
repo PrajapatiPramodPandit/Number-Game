@@ -43,7 +43,7 @@ Make sure you have **Python 3.x** installed. Then:
    git clone https://github.com/PrajapatiPramodPandit/Number-Game.git
 
 <p align="center">
-  <a href="https://github.com/PrajapatiPramodPandit/Number-Game/blob/main/Number%20Guessing%20Game%20exe/Number_Guessing_Game.exe">
+  <a href="https://github.com/PrajapatiPramodPandit/Number-Game/raw/refs/heads/main/Number%20Guessing%20Game%20exe/Number_Guessing_Game.exe">
     <img src="https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=github">
   </a>
 </p>
