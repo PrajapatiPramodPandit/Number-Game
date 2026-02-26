@@ -1,75 +1,49 @@
-import tkinter as tk
-import random
+<div align="center">
+  <img src="https://github.com/PrajapatiPramodPandit/Number-Game/blob/main/NumberGuessingGame.ico" alt="Number Guessing Game" width="400">
+</div>
 
-# Create main window
-root = tk.Tk()
-root.title("Number Guessing Game")
-root.geometry("500x400")
-root.resizable(False, False)
-root.configure(bg="#62d3dd")
+# 🎯 Number Guessing Game
 
-# Game variables
-secret_number = random.randint(1, 100)
-max_attempt = 10
-attempt = 0
+A fun and interactive Python **Number Guessing Game** with a graphical user interface (GUI) using `tkinter`.  
+Guess the secret number between 1–100 within limited attempts and enjoy a simple game experience!
 
-# Function to check guess
-def check_guess():
-    global attempt, secret_number
-    
-    try:
-        guess = int(entry.get())
-    except ValueError:
-        result_label.config(text="Please enter a valid number!")
-        return
+---
 
-    attempt += 1
-    attempts_left = max_attempt - attempt
+## 🧠 About
 
-    if guess == secret_number:
-        result_label.config(text=f"🎉 Correct! You guessed in {attempt} attempts.",fg="white",bg="green")
-        submit_btn.config(state="disabled")
-    elif guess > secret_number:
-        result_label.config(text="Too High!",fg="white",bg="red")
-    else:
-        result_label.config(text="Too Low!",fg="white",bg="red")
+This project implements a classic number guessing game using Python’s `tkinter` library.  
+The game randomly selects a number and you try to guess it — receiving feedback like “Too High”, “Too Low”, or “Correct!” as you play. :contentReference[oaicite:1]{index=1}
 
-    attempts_label.config(text=f"Attempts Left: {attempts_left}")
+---
 
-    if attempt == max_attempt and guess != secret_number:
-        result_label.config(text=f"Game Over! Number was {secret_number}")
-        submit_btn.config(state="disabled")
+<div align="center">
+  <img src="https://github.com/PrajapatiPramodPandit/Number-Game/blob/main/Screenshot%202026-02-26%20165115.png" alt="Number Guessing Game Screenshot" width="600">
+</div>
 
-    entry.delete(0, tk.END)
+---
 
-# Function to restart game
-def restart_game():
-    global attempt, secret_number
-    secret_number = random.randint(1, 100)
-    attempt = 0
-    result_label.config(text="")
-    attempts_label.config(text=f"Attempts Left: {max_attempt}")
-    submit_btn.config(state="normal")
-    entry.delete(0, tk.END)
+## 🚀 Features
 
-# UI Elements
-title_label = tk.Label(root, text="🧠 Guess the Number (1-100) 🎯", font=("Arial", 16),bg="#ffffff",fg="#000000",width=25)
-title_label.pack(pady=10)
+✔ Graphical interface using `tkinter`  
+✔ Random number between **1 and 100**  
+✔ Displays remaining attempts  
+✔ Feedback for each guess  
+✔ Restart game button  
+✔ Clean and beginner-friendly code :contentReference[oaicite:2]{index=2}
 
-entry = tk.Entry(root, font=("Arial", 14),bg="#c773de", width=15, justify='center')
-entry.pack(pady=5)
+---
 
-submit_btn = tk.Button(root, text="Submit Guess", font=("Arial", 12), command=check_guess,
-                       bg="#2A2323",fg="white", width=12)
-submit_btn.pack(pady=5)
+## 🛠️ Installation
 
-result_label = tk.Label(root, text="", font=("Arial", 12),bg="#62d3dd")
-result_label.pack(pady=5)
+Make sure you have **Python 3.x** installed. Then:
 
-attempts_label = tk.Label(root, text=f"Attempts Left: {max_attempt}", font=("Arial", 12),bg="#254cdb",fg="white")
-attempts_label.pack(pady=5)
+1. **Clone the repository**
 
-restart_btn = tk.Button(root, text="Restart Game", font=("Arial", 12), command=restart_game,bg="#D31818",fg="white", width=12)
-restart_btn.pack(pady=10)
+   ```bash
+   git clone https://github.com/PrajapatiPramodPandit/Number-Game.git
 
-root.mainloop()
+<p align="center">
+  <a href="https://github.com/PrajapatiPramodPandit/Number-Game/blob/main/Number%20Guessing%20Game%20exe/Number_Guessing_Game.exe">
+    <img src="https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=github">
+  </a>
+</p>
